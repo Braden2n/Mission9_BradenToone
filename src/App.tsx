@@ -39,6 +39,9 @@ function Teams() {
       {teamsList.map((team) => (
         <Team {...team} />
       ))}
+      <br />
+      <hr />
+      <br />
     </div>
   );
 }
