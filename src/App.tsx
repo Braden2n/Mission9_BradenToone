@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import teams from './CollegeBasketballTeams.json';
 
 interface ITeam {
   tid: number;
@@ -23,7 +24,13 @@ class Team extends React.Component<ITeam> {
 }
 
 function Teams() {
-  return <div></div>;
+  return (
+    <div>
+      {teams.teams.map((team) => (
+        <Team {...team} />
+      ))}
+    </div>
+  );
 }
 
 function Heading() {
