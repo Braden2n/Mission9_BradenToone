@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import teams from './CollegeBasketballTeams.json';
 
+const teamsList = teams.teams;
+
 interface ITeam {
   tid: number;
   cid: number;
@@ -19,14 +21,22 @@ interface ITeam {
 class Team extends React.Component<ITeam> {
   render() {
     const team = this.props;
-    return <div></div>;
+    return (
+      <div>
+        <h3>Name: {team.school}</h3>
+        <h4>Mascot: {team.name}</h4>
+        <h4>
+          Location: {team.city}, {team.state}
+        </h4>
+      </div>
+    );
   }
 }
 
 function Teams() {
   return (
     <div>
-      {teams.teams.map((team) => (
+      {teamsList.map((team) => (
         <Team {...team} />
       ))}
     </div>
