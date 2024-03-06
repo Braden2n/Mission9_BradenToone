@@ -1,6 +1,31 @@
 import React from 'react';
 import './App.css';
 
+interface ITeam {
+  tid: number;
+  cid: number;
+  did: number;
+  school: string;
+  name: string;
+  abbrev: string;
+  pop: number;
+  city: string;
+  state: string;
+  latitude: number;
+  longitude: number;
+}
+
+class Team extends React.Component<ITeam> {
+  render() {
+    const team = this.props;
+    return <div></div>;
+  }
+}
+
+function Teams() {
+  return <div></div>;
+}
+
 function Heading() {
   return (
     <div className="Heading">
@@ -17,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <Heading />
+      <Teams />
     </div>
   );
 }
